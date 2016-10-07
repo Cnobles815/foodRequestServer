@@ -11,9 +11,11 @@ public class FoodResponse {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String text;
+    private String zipcode;
 
     public FoodResponse(String text){
         this.text = text;
+        this.zipcode = "19801";
     }
 
     public FoodResponse(){
@@ -34,5 +36,13 @@ public class FoodResponse {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public String getZipcode() {
+        return zipcode;
+    }
+
+    public void setZipcode(String zipcode) {
+        this.zipcode = zipcode;
     }
 }
